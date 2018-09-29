@@ -33,5 +33,10 @@ namespace lycoris
 
             }
         }
+
+        public static AABB Concat(AABB aabb0, AABB aabb1)
+        {
+            return aabb0;
+        }
     }
 }
