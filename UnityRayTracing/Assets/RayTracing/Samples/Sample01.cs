@@ -7,8 +7,9 @@ namespace lycoris
         public Sample01()
         {
             var entityMgr = World.Active.GetOrCreateManager<EntityManager>();
-
             
+
+
 
 
             //entityMgr.CreateArchetype()
