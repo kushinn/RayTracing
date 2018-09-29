@@ -5,14 +5,14 @@ using UnityEngine;
 namespace lycoris
 {
     [Serializable]
-    public struct Ray : IComponentData
+    public struct RayData : IComponentData
     {
         public Vector3 origin;
         public Vector3 direction;
         public float time;
     }
 
-    public class RayComponent : ComponentDataWrapper<Ray>
+    public class RayComponent : ComponentDataWrapper<RayData>
     {
         public Vector3 GetPointAt(float factor)
         {

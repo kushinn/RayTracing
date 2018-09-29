@@ -24,30 +24,6 @@ namespace lycoris
         /// </summary>
         /// <param name="v"></param>
         /// <param name="n"></param>
-        /// <param name="eta"></param>
-        /// <returns></returns>
-        public static float3 Refract(float3 v, float3 n, float eta)
-        {
-            return math.refract(v, n, eta);
-        }
-
-        /// <summary>
-        /// Reflect
-        /// ri = l - 2(l·n)n;
-        /// </summary>
-        /// <param name="v"></param>
-        /// <param name="n"></param>
-        /// <returns></returns>
-        public static float3 Reflect(float3 v, float3 n)
-        {
-            return math.reflect(v, n);
-        }
-
-        /// <summary>
-        /// Refract
-        /// </summary>
-        /// <param name="v"></param>
-        /// <param name="n"></param>
         /// <param name="ni_over_nt"></param>
         /// <param name="refracted"></param>
         /// <returns></returns>
@@ -66,19 +42,10 @@ namespace lycoris
             return false;
         }
 
-        public static float Dot(float3 v, float3 n)
+        public static bool Hit(RayComponent r, float min, float max, AABB aabb, ref HitInfo info)
         {
-            return math.dot(v, n);
-        }
 
-        public static bool IsSharpAngle(float3 v, float3 n)
-        {
-            return math.dot(v, n) > 0.0f;
-        }
-
-        public static float Length(float3 v)
-        {
-            return math.length(v);
+            return false;
         }
     }
 }

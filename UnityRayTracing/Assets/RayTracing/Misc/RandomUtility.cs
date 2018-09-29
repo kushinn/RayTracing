@@ -5,7 +5,7 @@ namespace lycoris
 {
     public static class RandomUtility
     {
-        private static System.Random random = new Random();
+        private static readonly System.Random random = new Random();
 
         public static float RandomNDF()
         {

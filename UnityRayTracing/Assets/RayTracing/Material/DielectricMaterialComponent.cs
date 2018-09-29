@@ -15,6 +15,7 @@ namespace lycoris
         public override bool Scatter(RayComponent ray, ref HitInfo result, ref ScatterInfo scatterInfo)
         {
             scatterInfo.attenuation = Color.white;
+            scatterInfo.position = result.position;
 
             float refIdx = Value.refractiveIndex;
 

@@ -21,6 +21,7 @@ namespace lycoris
             Vector3 reflected = math.reflect(ray.Value.direction, result.normal);
             info.direction = reflected + fuzz * RandomUtility.RandomInUnitSphere();
             info.attenuation = albedo;
+            info.position = result.position;
             return false;
         }
     }
